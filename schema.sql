@@ -8,3 +8,6 @@
 	NEUTERED boolean, 
 	WEIGHT_KG decimal
     );
+
+
+ALTER TABLE animals ADD SPECIES varchar(50);
