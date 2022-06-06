@@ -19,6 +19,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [tafaramafemba](https://twitter.com/the_real_you___)
 - LinkedIn: [tafaramafemba](https://www.linkedin.com/in/tafara-mafemba/)
 
+## Collaborators
+
+👤 **Augusto Galindo**
+- GitHub: [@jsug9](https://github.com/jsug9)
+- LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
 ## 🤝 Contributing
 
