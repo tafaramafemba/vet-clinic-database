@@ -25,6 +25,12 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@jsug9](https://github.com/jsug9)
 - LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
+## Collaborators
+
+👤 **Augusto Galindo**
+- GitHub: [@jsug9](https://github.com/jsug9)
+- LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
