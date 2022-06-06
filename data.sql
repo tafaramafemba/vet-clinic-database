@@ -28,4 +28,85 @@ WHERE NAME LIKE '%mon';
 UPDATE ANIMALS SET SPECIES_ID = (SELECT ID FROM SPECIES WHERE NAME = 'Pokemon')
 WHERE SPECIES_ID IS NULL
 
+UPDATE ANIMALS SET OWNER_ID = (SELECT ID FROM OWNERS WHERE FULL_NAME = 'Sam Smith')
+WHERE NAME = 'Agumon'
+UPDATE ANIMALS SET OWNER_ID = (SELECT ID FROM OWNERS WHERE FULL_NAME = 'Jennifer Orwell')
+WHERE NAME IN ('Gabumon', 'Pikachu')
+UPDATE ANIMALS SET OWNER_ID = (SELECT ID FROM OWNERS WHERE FULL_NAME = 'Bob')
+WHERE NAME IN ('Devimon', 'Plantmon')
+UPDATE ANIMALS SET OWNER_ID = (SELECT ID FROM OWNERS WHERE FULL_NAME = 'Melody Pond')
+WHERE NAME IN ('Charmander', 'Squirtle', 'Blossom')
+UPDATE ANIMALS SET OWNER_ID = (SELECT ID FROM OWNERS WHERE FULL_NAME = 'Dean Winchester')
+WHERE NAME IN ('Angemon', 'Boarmon')
 
+INSERT INTO VETS (NAME, AGE, DATE_OF_GRADUATION) VALUES ('William Tatcher', 45, 'April 23, 2000')
+INSERT INTO VETS (NAME, AGE, DATE_OF_GRADUATION) VALUES ('Maisy Smith', 26, 'January 17, 2019')
+INSERT INTO VETS (NAME, AGE, DATE_OF_GRADUATION) VALUES ('Stephanie Mendez', 64, 'May 4, 1981')
+INSERT INTO VETS (NAME, AGE, DATE_OF_GRADUATION) VALUES ('Jack Harkness', 38, 'June 8, 2008')
+
+INSERT INTO SPECIALIZATIONS (SPECIES_ID, VET_ID) VALUES ((SELECT ID FROM SPECIES WHERE NAME = 'Pokemon'), 
+														(SELECT ID FROM VETS WHERE NAME = 'William Tatcher')),
+														((SELECT ID FROM SPECIES WHERE NAME = 'Digimon'), 
+														(SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')),
+														((SELECT ID FROM SPECIES WHERE NAME = 'Pokemon'), 
+														(SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')),
+														((SELECT ID FROM SPECIES WHERE NAME = 'Digimon'), 
+														(SELECT ID FROM VETS WHERE NAME = 'Jack Harkness'))
+
+INSERT INTO VISITS (ANIMAL_ID, VET_ID, DATE_OF_VISIT) VALUES ((SELECT ID FROM ANIMALS WHERE NAME = 'Agumon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'William Tatcher')
+															  ,'May 24, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Agumon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')
+															  ,'July 22, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Gabumon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Jack Harkness')
+															  ,'February 2, 2021'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Pikachu'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'January 5, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Pikachu'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'March 8, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Devimon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')
+															  ,'May 4, 2021'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Charmander'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Jack Harkness')
+															  ,'February 24, 2021'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Plantmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'December 21, 2019'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Plantmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'William Tatcher')
+															  ,'August 10, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Plantmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'April 7, 2021'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Squirtle'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')
+															  ,'September 29, 2019'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Angemon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Jack Harkness')
+															  ,'October 3, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Angemon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Jack Harkness')
+															  ,'November 4, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Boarmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'January 24, 2019'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Boarmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'May 15, 2019'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Boarmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'February 27, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Boarmon'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Maisy Smith')
+															  ,'August 3, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Blossom'),
+															  (SELECT ID FROM VETS WHERE NAME = 'Stephanie Mendez')
+															  ,'May 24, 2020'),
+															  ((SELECT ID FROM ANIMALS WHERE NAME = 'Blossom'),
+															  (SELECT ID FROM VETS WHERE NAME = 'William Tatcher')
+															  ,'January 11, 2021')
