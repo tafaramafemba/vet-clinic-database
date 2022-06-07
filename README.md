@@ -2,6 +2,9 @@
 
 In this project I will use a relational database to create the initial data structure for a vet clinic. I will create a table to store animals' information, insert some data into it, and query it.
 
+## Diagram
+
+<img src="./diagram.jpeg" alt = "diagram">
 
 ## Getting Started
 
@@ -19,12 +22,6 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [tafaramafemba](https://twitter.com/the_real_you___)
 - LinkedIn: [tafaramafemba](https://www.linkedin.com/in/tafara-mafemba/)
 
-
-## Collaborators
-
-👤 **Augusto Galindo**
-- GitHub: [@jsug9](https://github.com/jsug9)
-- LinkedIn: [Augusto Galindo](https://www.linkedin.com/in/augustogalindo/)
 
 ## 🤝 Contributing
 
